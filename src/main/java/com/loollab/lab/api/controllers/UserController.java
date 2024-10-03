@@ -1,5 +1,6 @@
 package com.loollab.lab.api.controllers;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -8,11 +9,11 @@ import org.springframework.web.bind.annotation.*;
  * @project api
  */
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/api/users")
 public class UserController {
 
     @GetMapping(value = "/{username}",produces = "application/json")
-    public String get(@PathVariable ("username") String username) {
-        return "Hello " + username;
+    public ResponseEntity <String> getUser( @PathVariable ("username") String username) {
+        return !username.isEmpty () ? ResponseEntity.ok("Hello " + username) : ResponseEntity.badRequest().build();
     }
 }
