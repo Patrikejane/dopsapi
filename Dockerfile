@@ -1,4 +1,4 @@
-FROM openjdk:21-oracle
+FROM openjdk:21-jdk
 LABEL authors="sskma"
 
 EXPOSE 8080
