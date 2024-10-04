@@ -43,3 +43,7 @@ jobs:
         cache: maven
     - name: Test with Maven
       run: mvn test
+
+#Login to Docker Hub
+  push_to_docker_hub:
+    name: Push Docker image to Docker Hub
