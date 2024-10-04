@@ -79,6 +79,7 @@
 			</plugin>
 
 		</plugins>
+		<finalName>devopapi</finalName>
 	</build>
 
 </project>
